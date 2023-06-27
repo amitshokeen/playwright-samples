@@ -1,0 +1,156 @@
+{
+  "config": {
+    "configFile": "/Users/ashokeen/learn-playwright/playwright.config.ts",
+    "rootDir": "/Users/ashokeen/learn-playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "totalTime": 11723.428999900818
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/ashokeen/learn-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/ashokeen/learn-playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/windows.test.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.35.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "windows.test.ts",
+      "file": "windows.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Interact with multiple tabs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 4914,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
+                    },
+                    {
+                      "text": "https://twitter.com/Lambdatesting\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-06-27T08:20:13.306Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9f9e501b862ea12467e2-a2cb8b7c76ca02f47fd5",
+          "file": "windows.test.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Interact with button that causes multiple tabs to open",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 5801,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "No. of tabs: 3\n"
+                    },
+                    {
+                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
+                    },
+                    {
+                      "text": "https://www.facebook.com/lambdatest/\n"
+                    },
+                    {
+                      "text": "https://twitter.com/intent/follow?screen_name=Lambdatesting\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-06-27T08:20:18.225Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9f9e501b862ea12467e2-a95b5a51be7b5bce0d61",
+          "file": "windows.test.ts",
+          "line": 23,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
