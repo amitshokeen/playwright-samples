@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 28014.683000087738
+      "totalTime": 18955.15400004387
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,7 +47,7 @@
         "testDir": "/Users/ashokeen/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "tests/windows.test.ts"
+          "tests/calendar.test.ts"
         ],
         "timeout": 120000
       }
@@ -60,13 +60,13 @@
   },
   "suites": [
     {
-      "title": "windows.test.ts",
-      "file": "windows.test.ts",
+      "title": "calendar.test.ts",
+      "file": "calendar.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Interact with multiple tabs",
+          "title": "Calendar demo using moment",
           "ok": true,
           "tags": [],
           "tests": [
@@ -80,77 +80,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11700,
+                  "duration": 18245,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://twitter.com/Lambdatesting\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-06-27T08:58:22.763Z",
+                  "startTime": "2023-06-27T11:32:11.764Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "9f9e501b862ea12467e2-a2cb8b7c76ca02f47fd5",
-          "file": "windows.test.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "Interact with button that causes multiple tabs to open",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 15181,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "No. of tabs: 3\n"
-                    },
-                    {
-                      "text": "https://www.lambdatest.com/selenium-playground/window-popup-modal-demo\n"
-                    },
-                    {
-                      "text": "https://www.facebook.com/lambdatest/\n"
-                    },
-                    {
-                      "text": "https://twitter.com/intent/follow?screen_name=Lambdatesting\n"
-                    },
-                    {
-                      "text": "LambdaTest\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-27T08:58:34.468Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9f9e501b862ea12467e2-a95b5a51be7b5bce0d61",
-          "file": "windows.test.ts",
+          "id": "d38dc42fc23f1a3d75f7-ba757dd7de054ccebfc6",
+          "file": "calendar.test.ts",
           "line": 25,
-          "column": 5
+          "column": 6
         }
       ]
     }
