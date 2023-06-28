@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 18955.15400004387
+      "totalTime": 24297.97399997711
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,7 +47,7 @@
         "testDir": "/Users/ashokeen/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "tests/calendar.test.ts"
+          "tests/upload-download.test.ts"
         ],
         "timeout": 120000
       }
@@ -60,13 +60,13 @@
   },
   "suites": [
     {
-      "title": "calendar.test.ts",
-      "file": "calendar.test.ts",
+      "title": "upload-download.test.ts",
+      "file": "upload-download.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Calendar demo using moment",
+          "title": "Download files",
           "ok": true,
           "tags": [],
           "tests": [
@@ -80,22 +80,22 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 18245,
+                  "duration": 23662,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-06-27T11:32:11.764Z",
+                  "startTime": "2023-06-28T08:54:41.403Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "d38dc42fc23f1a3d75f7-ba757dd7de054ccebfc6",
-          "file": "calendar.test.ts",
-          "line": 25,
-          "column": 6
+          "id": "58d65f9be4ea7a2bc3ec-f2aef1b4d88a6dbaf1b6",
+          "file": "upload-download.test.ts",
+          "line": 3,
+          "column": 5
         }
       ]
     }
