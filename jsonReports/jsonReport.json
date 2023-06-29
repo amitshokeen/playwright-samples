@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 24297.97399997711
+      "totalTime": 78658.17899990082
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,7 +47,7 @@
         "testDir": "/Users/ashokeen/learn-playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "tests/upload-download.test.ts"
+          "tests/registerAndLogin.test.ts"
         ],
         "timeout": 120000
       }
@@ -60,13 +60,13 @@
   },
   "suites": [
     {
-      "title": "upload-download.test.ts",
-      "file": "upload-download.test.ts",
+      "title": "registerAndLogin.test.ts",
+      "file": "registerAndLogin.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Download files",
+          "title": "Register test_01",
           "ok": true,
           "tags": [],
           "tests": [
@@ -80,21 +80,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 23662,
+                  "duration": 77983,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-06-28T08:54:41.403Z",
+                  "startTime": "2023-06-29T11:21:36.222Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "58d65f9be4ea7a2bc3ec-f2aef1b4d88a6dbaf1b6",
-          "file": "upload-download.test.ts",
-          "line": 3,
+          "id": "220733dd0bfe3424be2a-13af98490fff949edc1c",
+          "file": "registerAndLogin.test.ts",
+          "line": 7,
           "column": 5
         }
       ]
