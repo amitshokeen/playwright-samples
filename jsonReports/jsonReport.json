@@ -1,7 +1,7 @@
 {
   "config": {
     "configFile": "/Users/ashokeen/learn-playwright/playwright.config.ts",
-    "rootDir": "/Users/ashokeen/learn-playwright/tests",
+    "rootDir": "/Users/ashokeen/learn-playwright",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 100201.97800016403
+      "totalTime": 294492.9360001087
     },
     "preserveOutput": "always",
     "reporter": [
@@ -44,10 +44,10 @@
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/ashokeen/learn-playwright/tests",
+        "testDir": "/Users/ashokeen/learn-playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/login.test.ts"
+          "fixturePOM/registerAndLogin_using_fixture.test.ts"
         ],
         "timeout": 120000
       },
@@ -57,10 +57,10 @@
         "retries": 0,
         "id": "firefox",
         "name": "firefox",
-        "testDir": "/Users/ashokeen/learn-playwright/tests",
+        "testDir": "/Users/ashokeen/learn-playwright",
         "testIgnore": [],
         "testMatch": [
-          "tests/login.test.ts"
+          "fixturePOM/registerAndLogin_using_fixture.test.ts"
         ],
         "timeout": 120000
       }
@@ -73,218 +73,221 @@
   },
   "suites": [
     {
-      "title": "login.test.ts",
-      "file": "login.test.ts",
+      "title": "fixturePOM/registerAndLogin_using_fixture.test.ts",
+      "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "login test demo",
-          "ok": false,
-          "tags": [],
-          "tests": [
+          "title": "Page object test demo",
+          "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Register test_01",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 27144,
-                  "error": {
-                    "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n    at /Users/ashokeen/learn-playwright/tests/login.test.ts:23:24",
-                    "location": {
-                      "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                      "column": 24,
-                      "line": 23
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m newPage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m newPage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "location": {
-                        "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                        "column": 24,
-                        "line": 23
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 77284,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-30T11:36:08.882Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                },
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "timedOut",
+                      "duration": 119999,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m newPage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m newPage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/tests/login.test.ts:23:24\u001b[22m"
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/ashokeen/learn-playwright/pages/registerPage.ts",
+                            "column": 23,
+                            "line": 44
+                          },
+                          "message": "Error: page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages/registerPage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"input[type='submit']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         ])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at RegisterPage.clickContinueToRegister (/Users/ashokeen/learn-playwright/pages/registerPage.ts:44:23)\u001b[22m\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:17:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-30T11:38:15.267Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-Register-test-01-firefox/video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-Register-test-01-firefox/test-failed-1.png"
+                        }
+                      ]
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-30T05:17:05.854Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-chromium/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-chromium/test-failed-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-chromium/test-failed-2.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                    "column": 24,
-                    "line": 23
-                  }
+                  "status": "unexpected"
                 }
               ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "12975f3ff1f884ffbbdd-8bca3e0a829cec99d27b",
-          "file": "login.test.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "d0c67bc01923b74782ec-fd3ef9dc2e0b426fc910",
+              "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
+              "line": 6,
+              "column": 9
+            },
             {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "login test_02",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 18766,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-30T05:17:35.052Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "12975f3ff1f884ffbbdd-8d5dafb792e0e06406d4",
-          "file": "login.test.ts",
-          "line": 27,
-          "column": 5
-        },
-        {
-          "title": "login test demo",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "failed",
-                  "duration": 25665,
-                  "error": {
-                    "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n    at /Users/ashokeen/learn-playwright/tests/login.test.ts:23:24",
-                    "location": {
-                      "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                      "column": 24,
-                      "line": 23
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m newPage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m newPage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "location": {
-                        "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                        "column": 24,
-                        "line": 23
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 47459,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30",
+                        "location": {
+                          "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                          "column": 30,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m"
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7mlogin\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/\u001b[7maccount\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\u001b[2m  -   locator resolved to <html dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"https://ecommerce-playground.lambdatest.io/index.php?route=account/account\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m newPage \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m newContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m newPage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://ecommerce-playground.lambdatest.io/index.php?route=account/login\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/tests/login.test.ts:23:24\u001b[22m"
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                            "column": 30,
+                            "line": 27
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-30T11:37:27.249Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-login-test-02-chromium/video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-login-test-02-chromium/test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                        "column": 30,
+                        "line": 27
+                      }
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-30T05:17:54.963Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-firefox/video.webm"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-firefox/test-failed-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/ashokeen/learn-playwright/test-results/login-login-test-demo-firefox/test-failed-2.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/ashokeen/learn-playwright/tests/login.test.ts",
-                    "column": 24,
-                    "line": 23
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "12975f3ff1f884ffbbdd-bab59a97363bb93c9efa",
-          "file": "login.test.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
+                  "status": "unexpected"
+                },
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 20986,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-06-30T05:18:23.026Z",
-                  "attachments": []
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "failed",
+                      "duration": 43768,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30",
+                        "location": {
+                          "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                          "column": 30,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                            "column": 30,
+                            "line": 27
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-30T11:40:17.518Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-login-test-02-firefox/video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-login-test-02-firefox/test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
+                        "column": 30,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "d0c67bc01923b74782ec-d75ea82a29ca8dda34c8",
+              "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
+              "line": 22,
+              "column": 9
             }
-          ],
-          "id": "12975f3ff1f884ffbbdd-350f6588e6e455963ec4",
-          "file": "login.test.ts",
-          "line": 27,
-          "column": 5
+          ]
         }
       ]
     }

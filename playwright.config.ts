@@ -14,7 +14,7 @@ export default defineConfig({
   expect: {
     timeout: 5 * 1000
   },
-  testDir: './tests',
+  //testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -25,7 +25,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['html', { open: "always" }],['dot'], ['json', { outputFile: 'jsonReports/jsonReport.json' }]],
-  testMatch: ["tests/login.test.ts"],
+  testMatch: ["fixturePOM/registerAndLogin_using_fixture.test.ts"],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

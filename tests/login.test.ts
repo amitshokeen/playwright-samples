@@ -1,11 +1,11 @@
 import { test, expect, chromium } from '@playwright/test';
 
-test("login test demo", async ({page}) => {
+test("login test demo", async () => {
     const browser = await chromium.launch({
         headless: false
     });
-    // const context = await browser.newContext();
-    // const page = await context.newPage();
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
     await page.goto("https://ecommerce-playground.lambdatest.io/");
     await page.hover("//a[@data-toggle='dropdown']//span[contains(.,'My account')]");
@@ -24,12 +24,12 @@ test("login test demo", async ({page}) => {
     await page.waitForTimeout(5000);
 });
 
-test('test', async ({page}) => {
-    // const browser = await chromium.launch({
-    //     headless: false
-    // });
-    // const context = await browser.newContext();
-    // const page = await context.newPage();
+test('test', async () => {
+    const browser = await chromium.launch({
+        headless: false
+    });
+    const context = await browser.newContext();
+    const page = await context.newPage();
     await page.goto('https://ecommerce-playground.lambdatest.io/');
     await page.getByRole('button', { name: ' My account' }).click();
     await page.getByPlaceholder('E-Mail Address').click();
