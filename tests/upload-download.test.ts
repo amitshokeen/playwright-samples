@@ -1,11 +1,11 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("Download files", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Download files", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/generate-file-to-download-demo");
     await page.type("#textbox", "This is a test...");
@@ -20,12 +20,12 @@ test("Download files", async () => {
     // console.log(path);
 })
 
-test("Upload files", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Upload files", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
     
     await page.goto("https://blueimp.github.io/jQuery-File-Upload/");
     await page.setInputFiles("input[type='file']", 
@@ -36,12 +36,12 @@ test("Upload files", async () => {
     await page.waitForTimeout(3000);
 })
 
-test.only("Upload files based in filechooser", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test.only("Upload files based in filechooser", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://blueimp.github.io/jQuery-File-Upload/");
 

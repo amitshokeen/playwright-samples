@@ -1,11 +1,11 @@
 import { test, expect, chromium } from '@playwright/test';
 
-test('test', async () => {
-  const browser = await chromium.launch({
-    headless: false
-});
-const context = await browser.newContext();
-const page = await context.newPage();
+test('test', async ({page}) => {
+//   const browser = await chromium.launch({
+//     headless: false
+// });
+// const context = await browser.newContext();
+// const page = await context.newPage();
   await page.goto('https://ecommerce-playground.lambdatest.io/');
   await page.getByRole('button', { name: ' My account' }).click();
   await expect(page).toHaveURL("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");

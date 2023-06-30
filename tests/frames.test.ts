@@ -1,11 +1,11 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("Interact with frames", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Interact with frames", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
     
     await page.goto("https://letcode.in/frame");
     const allFrames = page.frames();
@@ -18,12 +18,12 @@ test("Interact with frames", async () => {
     await page.waitForTimeout(5000);
 })
 
-test("Another way to interact with frames", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Another way to interact with frames", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
     
     await page.goto("https://letcode.in/frame");
     const allFrames = page.frames();

@@ -17,12 +17,12 @@ test("Interaction with Inputs", async ()=> {
     await expect(messageInput).toHaveValue("Hi Amit Shokeen");
 })
 
-test("Sum", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Sum", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/simple-form-demo");
     const sum1Input = page.locator("#sum1");

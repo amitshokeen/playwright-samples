@@ -1,11 +1,11 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("handling dropdown", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("handling dropdown", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/select-dropdown-demo");
     await page.selectOption("#select-demo", {
@@ -27,12 +27,12 @@ test("handling dropdown", async () => {
     await page.waitForTimeout(5000);
 })
 
-test.skip("Jquery dropdown search demo", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test.skip("Jquery dropdown search demo", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     page.goto("https://www.lambdatest.com/selenium-playground/jquery-dropdown-search-demo");
     page.click("#country");

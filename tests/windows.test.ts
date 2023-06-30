@@ -2,12 +2,12 @@ import { test, expect, chromium, Page } from "@playwright/test";
 
 let facebookPage: Page;
 
-test("Interact with multiple tabs", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Interact with multiple tabs", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/window-popup-modal-demo");
     console.log(page.url());
@@ -22,12 +22,12 @@ test("Interact with multiple tabs", async () => {
     //now you can work with the newWindow and locate elements and work with them.
 })
 
-test("Interact with button that causes multiple tabs to open", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Interact with button that causes multiple tabs to open", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/window-popup-modal-demo");
     const [multiPage] = await Promise.all([

@@ -1,11 +1,11 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("handling alerts", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("handling alerts", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo");
     page.on("dialog", async (alert) => {
@@ -16,12 +16,12 @@ test("handling alerts", async () => {
     await page.locator("button:has-text('Click Me')").nth(0).click();
 })
 
-test("handling some more alerts", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("handling some more alerts", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo");
     page.on("dialog", async (alert) => {
@@ -33,12 +33,12 @@ test("handling some more alerts", async () => {
     await expect(page.locator("#confirm-demo")).toContainText("Cancel!");
 })
 
-test("handling yet more alerts", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("handling yet more alerts", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo");
     page.on("dialog", async (alert) => {
@@ -50,12 +50,12 @@ test("handling yet more alerts", async () => {
     await expect(page.locator("#prompt-demo")).toContainText("'Amit'");
 })
 
-test("handling modal alerts", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("handling modal alerts", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/bootstrap-modal-demo");
     await page.click("button[data-target='#myModal']");

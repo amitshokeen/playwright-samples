@@ -1,15 +1,15 @@
 import { test, expect, chromium } from '@playwright/test';
 import moment from "moment";
 
-test("Calendar demo using fill function", async () => {
+test("Calendar demo using fill function", async ({page}) => {
     // I'm using the below three const values becuase the usual way of async ({ page } => {}) 
     //is somehow not working properly for me. Maybe I'll dwell on that issue later.
     
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/bootstrap-date-picker-demo");
     // In the browser console, you may have to do this: > document.getElementById("birthday").value
@@ -22,12 +22,12 @@ test("Calendar demo using fill function", async () => {
     await page.waitForTimeout(3000);
 })
 
-test("Calendar demo using moment", async () => {
-    const browser = await chromium.launch({
-        headless: false
-    });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+test("Calendar demo using moment", async ({page}) => {
+    // const browser = await chromium.launch({
+    //     headless: false
+    // });
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
 
     await page.goto("https://www.lambdatest.com/selenium-playground/bootstrap-date-picker-demo");
     let date = "";
