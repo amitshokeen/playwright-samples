@@ -1,9 +1,9 @@
 import { test, expect } from "../base/pomFixture";
 import * as data from "../test-data/registerAndLogin-data.json";
 
-test.use({
-        browserName: "webkit"
-    })
+// test.use({
+//         browserName: "webkit" //"firefox" or "chromium"
+//     })
 
 test.describe("Page object test demo", async() => {
    
