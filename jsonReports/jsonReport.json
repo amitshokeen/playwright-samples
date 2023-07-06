@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "totalTime": 294492.9360001087
+      "totalTime": 183246.73800000548
     },
     "preserveOutput": "always",
     "reporter": [
@@ -82,12 +82,12 @@
         {
           "title": "Page object test demo",
           "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
-          "line": 5,
+          "line": 8,
           "column": 6,
           "specs": [
             {
               "title": "Register test_01",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -99,17 +99,47 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 77284,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 33030,
+                      "error": {
+                        "message": "page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================",
+                        "stack": "Error: page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================\n    at RegisterPage.clickContinueToRegister (/Users/ashokeen/learn-playwright/pages/registerPage.ts:44:23)\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:23:9",
+                        "location": {
+                          "file": "/Users/ashokeen/learn-playwright/pages/registerPage.ts",
+                          "column": 23,
+                          "line": 44
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mpages/registerPage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"input[type='submit']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         ])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ashokeen/learn-playwright/pages/registerPage.ts",
+                            "column": 23,
+                            "line": 44
+                          },
+                          "message": "Error: page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages/registerPage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"input[type='submit']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         ])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at RegisterPage.clickContinueToRegister (/Users/ashokeen/learn-playwright/pages/registerPage.ts:44:23)\u001b[22m\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:23:9\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-30T11:36:08.882Z",
-                      "attachments": []
+                      "startTime": "2023-07-06T00:27:16.599Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/ashokeen/learn-playwright/test-results/fixturePOM-registerAndLogin_using_fixture-Page-object-test-demo-Register-test-01-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ashokeen/learn-playwright/pages/registerPage.ts",
+                        "column": 23,
+                        "line": 44
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 },
                 {
                   "timeout": 120000,
@@ -119,9 +149,9 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 2,
                       "status": "timedOut",
-                      "duration": 119999,
+                      "duration": 120001,
                       "error": {
                         "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
                       },
@@ -135,13 +165,13 @@
                             "column": 23,
                             "line": 44
                           },
-                          "message": "Error: page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages/registerPage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"input[type='submit']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         ])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at RegisterPage.clickContinueToRegister (/Users/ashokeen/learn-playwright/pages/registerPage.ts:44:23)\u001b[22m\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:17:9\u001b[22m"
+                          "message": "Error: page.waitForURL: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation to \"https://ecommerce-playground.lambdatest.io/index.php?route=account/success\" until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages/registerPage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"input[type='submit']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 43 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(url)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         ])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at RegisterPage.clickContinueToRegister (/Users/ashokeen/learn-playwright/pages/registerPage.ts:44:23)\u001b[22m\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:23:9\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-30T11:38:15.267Z",
+                      "startTime": "2023-07-06T00:28:07.796Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -161,7 +191,7 @@
               ],
               "id": "d0c67bc01923b74782ec-fd3ef9dc2e0b426fc910",
               "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
-              "line": 6,
+              "line": 12,
               "column": 9
             },
             {
@@ -177,33 +207,33 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "failed",
-                      "duration": 47459,
+                      "duration": 9958,
                       "error": {
                         "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:33:30",
                         "location": {
                           "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                           "column": 30,
-                          "line": 27
+                          "line": 33
                         },
-                        "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m })\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                             "column": 30,
-                            "line": 27
+                            "line": 33
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:33:30\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-30T11:37:27.249Z",
+                      "startTime": "2023-07-06T00:27:56.804Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -219,7 +249,7 @@
                       "errorLocation": {
                         "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                         "column": 30,
-                        "line": 27
+                        "line": 33
                       }
                     }
                   ],
@@ -233,33 +263,33 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "status": "failed",
-                      "duration": 43768,
+                      "duration": 9486,
                       "error": {
                         "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:33:30",
                         "location": {
                           "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                           "column": 30,
-                          "line": 27
+                          "line": 33
                         },
-                        "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m })\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                             "column": 30,
-                            "line": 27
+                            "line": 33
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:27:30\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"My Account\"\u001b[39m\nReceived: \u001b[31m{}\u001b[39m\n\n\u001b[0m \u001b[90m 31 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39menterPassword(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickLoginBtn()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m         expect(page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoBe(\u001b[32m\"My Account\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m         \u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 36 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at /Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts:33:30\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-06-30T11:40:17.518Z",
+                      "startTime": "2023-07-06T00:30:09.423Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -275,7 +305,7 @@
                       "errorLocation": {
                         "file": "/Users/ashokeen/learn-playwright/fixturePOM/registerAndLogin_using_fixture.test.ts",
                         "column": 30,
-                        "line": 27
+                        "line": 33
                       }
                     }
                   ],
@@ -284,7 +314,7 @@
               ],
               "id": "d0c67bc01923b74782ec-d75ea82a29ca8dda34c8",
               "file": "fixturePOM/registerAndLogin_using_fixture.test.ts",
-              "line": 22,
+              "line": 28,
               "column": 9
             }
           ]

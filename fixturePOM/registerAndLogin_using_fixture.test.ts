@@ -1,8 +1,12 @@
 import { test, expect } from "../base/pomFixture";
 import * as data from "../test-data/registerAndLogin-data.json";
 
+test.use({
+        browserName: "webkit"
+    })
 
 test.describe("Page object test demo", async() => {
+   
     test("Register test_01", async ({ page, baseURL, registerPage }) => {
         //const register = new RegisterPage(page);
         await page.goto(`${baseURL}route=account/register`);
