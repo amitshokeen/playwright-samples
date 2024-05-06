@@ -34,7 +34,7 @@ test("Interact with button that causes multiple tabs to open", async ({page}) =>
         page.waitForEvent("popup"),
         page.click('#followboth')
     ])
-    await page.waitForLoadState();
+    await multiPage.waitForLoadState();
     const pages = multiPage.context().pages();
     console.log('No. of tabs: ' + pages.length);
     

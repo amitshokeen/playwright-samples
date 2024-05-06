@@ -17,7 +17,7 @@ test("Interaction with Inputs", async ()=> {
     await expect(messageInput).toHaveValue("Hi Amit Shokeen");
 })
 
-test("Sum", async ({page}) => {
+test("Sum", async ({ page }) => {
     // const browser = await chromium.launch({
     //     headless: false
     // });
