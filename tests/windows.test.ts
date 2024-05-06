@@ -58,3 +58,6 @@ test("Interact with button that causes multiple tabs to open", async ({page}) =>
     const text = await facebookPage.textContent("h1");
     console.log(text);
 })
+
+// reference:
+// https://www.youtube.com/watch?v=JN16nilL8Wg&list=PLZMWkkQEwOPlS6BSWWqaAIrSNf_Gw4MQ1&index=8
